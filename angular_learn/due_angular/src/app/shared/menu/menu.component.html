@@ -1,0 +1,5 @@
+<mat-nav-list role="list">
+
+   <!-- <app-menu-item *ngFor="let item of navItems" [item]="item" (breadcrumdChange)="breadcrumdMenuChange($event)"></app-menu-item> -->
+   <app-menu-list *ngFor="let i_menu of navItems" [item]="i_menu"  (breadcrumdChange)="breadcrumdMenuChange($event)"></app-menu-list>
+  </mat-nav-list>
