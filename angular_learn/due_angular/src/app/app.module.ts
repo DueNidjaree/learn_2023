@@ -11,8 +11,10 @@ import { LayoutComponent } from './shared/layout/layout.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { MenuComponent } from './shared/menu/menu.component';
 import { MenuListComponent } from './shared/menu-list/menu-list.component';
-import { BreadcrumbComponent } from './shared/breadcrumb/breadcrumb.component';
-import { MemberComponent } from './moduls/member/member.component'
+import { SubHeadderComponent } from './shared/sub-headder/sub-headder.component';
+import { MemberComponent } from './modules/member/member.component';
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,14 +23,15 @@ import { MemberComponent } from './moduls/member/member.component'
     HeaderComponent,
     MenuComponent,
     MenuListComponent,
-    BreadcrumbComponent,
+    SubHeadderComponent,
     MemberComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

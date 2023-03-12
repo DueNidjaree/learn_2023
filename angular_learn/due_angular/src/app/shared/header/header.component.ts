@@ -1,4 +1,4 @@
-import { Component,Output,EventEmitter } from '@angular/core';
+import { Component ,Output,EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,9 +6,9 @@ import { Component,Output,EventEmitter } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+
   @Output() toggleClick = new EventEmitter<boolean>();
-  toggleMenu() {
-    // console.log(11)
+  toggleMenu(){
     this.toggleClick.emit();
   }
 }

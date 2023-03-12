@@ -1,6 +1,5 @@
-export * from './menu_item';
-// export * from './title-name';
-// export * from './member';
-// export * from './prov-amp-tam';
-// export * from './uploadfile';
- 
+import { from } from 'rxjs';
+
+export * from './menu-item';
+export * from './p-a-t.model';
+export * from './upload.model';

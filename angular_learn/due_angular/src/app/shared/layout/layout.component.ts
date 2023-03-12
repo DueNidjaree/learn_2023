@@ -1,6 +1,5 @@
-import { Component,Output, ViewChild, EventEmitter, Input  } from '@angular/core';
+import { Component,EventEmitter,Input,Output,ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-
 
 @Component({
   selector: 'app-layout',
@@ -9,14 +8,16 @@ import { MatSidenav } from '@angular/material/sidenav';
 })
 export class LayoutComponent {
 
-  @ViewChild('side_menu') _side_menu! : MatSidenav;
-  toggle_menu(){
-    this._side_menu.toggle();
+  @ViewChild('menu') sideNav!:MatSidenav;
+  side_menu(){
+    this.sideNav.toggle();
+    // console.log(1);
   }
 
-  breadcrumbs="";
-  breadcrumdLayoutChange(val:string){  
-    this.breadcrumbs=val;  
-    //console.log("val:",val);
+  sub_header_text="";
+  layoutChage(val:string){
+    this.sub_header_text = val;
+    // console.log(val);
   }
+
 }

@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MemberComponent } from './moduls/member/member.component';
-
+import { MemberComponent } from './modules/member/member.component';
 
 const routes: Routes = [
   {
     path:'member',
-    data:{breadcrumb:'จัดการข้อมูลสมาชิก'},
+    data:{sub_heder_change:'จัดการข้อมูลสมาชิก'},
     component: MemberComponent,
-  }
+  },
+ // {
+  //   path: '**',
+  //   redirectTo: '/notfound'
+  // },
 ];
 
 @NgModule({

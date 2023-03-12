@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { NavItem } from '../../_models';
+import { Component,Output,EventEmitter } from '@angular/core';
+import {NavItem} from '../../_models/index';
 
 @Component({
   selector: 'app-menu',
@@ -7,32 +7,28 @@ import { NavItem } from '../../_models';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent {
-  @Output() breadcrumbMenuEvent=new EventEmitter<string>();
-  navItems: NavItem[] = [
 
+  NavItems : NavItem[]=[
     {
       displayName: 'หน้าหลัก',
       disabled: true,
       iconName: 'home',
       route: '/admin',
-      children: [
-        
-      ]
+      children: []
     },
     {
       displayName: 'จัดการข้อมูลสมาชิก',
       disabled: true,
       iconName: 'perm_identity',
       route: '/member',
-      children: [
-        
-      ]
+      children: []
     },
-    
   ];
-  breadcrumdMenuChange(val:string){
-    this.breadcrumbMenuEvent.emit(val);
-  //   //console.log("breadcrumdMenuChange");
+
+  @Output() memumain_change = new EventEmitter<string>();
+  menu_change(val:string){
+    this.memumain_change.emit(val);
+    console.log(val);
   }
 
 }
